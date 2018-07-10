@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 //variables
 require('dotenv').config();
 
+const html = require('home');
+
 //rutas
 const usersRoutes = require('./api/routes/usersRoute');
 const bebidasRoutes = require('./api/routes/bebidasRoute');
@@ -38,6 +40,7 @@ app.use((req, res, next) => {
   next();//procedemos a resto de las rutas
 });
 
+app.use(html);
 app.use('/users', usersRoutes);
 app.use('/bebidas', bebidasRoutes);
 app.use('/pupusas', pupusasRoutes);
