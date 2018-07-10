@@ -1,2 +1,1 @@
-web: node server.js,
-web: home.html
+web: index.php
