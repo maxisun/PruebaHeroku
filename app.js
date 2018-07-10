@@ -40,7 +40,7 @@ app.use((req, res, next) => {
   next();//procedemos a resto de las rutas
 });
 
-app.use(html);
+app.use('/',html);
 app.use('/users', usersRoutes);
 app.use('/bebidas', bebidasRoutes);
 app.use('/pupusas', pupusasRoutes);
